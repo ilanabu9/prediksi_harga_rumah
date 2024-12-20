@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi Harga Rumah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Hasil Prediksi</h1>
+
+        <!-- Menampilkan hasil prediksi harga rumah yang sudah diformat -->
+        <div class="result">
+            <p><strong>Prediksi Harga Rumah: </strong>{{ prediction }}</p>
+        </div>
+
+        <!-- Navigasi -->
+        <div class="navigation">
+            <a href="/">Kembali ke Halaman Utama</a> | 
+            <a href="/pembaruan">Pembaruan Model</a>
+        </div>
+    </div>
+
+    <footer>
+        <p> RUSLAN ABU HONI. &copy; 2024</p>
+    </footer>
+
+</body>
+</html>

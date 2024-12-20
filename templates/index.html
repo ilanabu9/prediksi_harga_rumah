@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Harga Rumah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Form Prediksi Harga Rumah DKI Jakarta</h1>
+        <form action="/predict" method="POST">
+    <input type="number" name="KT" placeholder="Jumlah Kamar Tidur" required><br>
+    <input type="number" name="KM" placeholder="Jumlah Kamar Mandi" required><br>
+    <input type="number" name="LB" placeholder="Luas Bangunan (m2)" required><br>
+    <input type="number" name="LT" placeholder="Luas Tanah (m2)" required><br>
+    <input type="number" name="Usia" placeholder="Usia Rumah (tahun)" required><br>
+    <input type="text" name="Lokasi" placeholder="Lokasi" required><br>
+
+    <label for="Fasilitas">Fasilitas</label><br>
+    <div class="fasilitas-container">
+        <input type="checkbox" name="Fasilitas" value="Tidak Ada" id="TidakAda"><label for="TidakAda">Tidak Ada</label>
+        <input type="checkbox" name="Fasilitas" value="Kolam Renang" id="KolamRenang"><label for="KolamRenang">Kolam Renang</label>
+        <input type="checkbox" name="Fasilitas" value="Garasi" id="Garasi"><label for="Garasi">Garasi</label>
+        <input type="checkbox" name="Fasilitas" value="Taman" id="Taman"><label for="Taman">Taman</label>
+    </div><br>
+
+    <button type="submit">Prediksi</button>
+    <a href="/pembaruan">Pembaruan Model</a>
+</form>
+</div>
+     <footer>
+        <p> RUSLAN ABU HONI. &copy; 2024</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembaruan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Pembaruan Model Prediksi</h1>
+
+     <!-- Form untuk pembaruan model -->
+        <form method="POST" action="/pembaruan" enctype="multipart/form-data" class="form">
+            <label for="model">Pilih file model (pkl):</label>
+            <input type="file" name="model" accept=".pkl" required>
+            
+            <label for="scaler">Pilih file scaler (pkl):</label>
+            <input type="file" name="scaler" accept=".pkl" required>
+            
+            <label for="columns">Pilih file columns (pkl):</label>
+            <input type="file" name="columns" accept=".pkl" required>
+            
+            <button type="submit">Perbarui Model</button>
+            <a href="/">Kembali ke Halaman Utama</a>
+        </form>
+        </div>
+    <footer>
+        <p> RUSLAN ABU HONI. &copy; 2024</p>
+    </footer>
+</body>
+</html>

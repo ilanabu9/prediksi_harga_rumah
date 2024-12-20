@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/static/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 20px;
+    
+}
+
+/* Menambahkan lapisan hitam transparan */
+body::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1; 
+
+}
+
+/* Container untuk form dan hasil */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px; 
+    
+}
+
+input[type="number"], input[type="text"], button {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Menampilkan hasil prediksi */
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    padding-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+/* Styling untuk checkbox fasilitas (tanpa miring) */
+.fasilitas-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px; 
+}
+
+label {
+    display: inline-block;
+    margin-right: 5px; 
+    font-size: 14px;
+}
+
+/* Styling untuk footer */
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px; 
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Styling untuk link */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styling untuk form input */
+input[type="number"], input[type="text"], select {
+    font-size: 12px;
+    padding: 10px;
+}
+
+/* Responsif untuk perangkat mobile */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    input[type="number"], input[type="text"], button {
+        font-size: 14px;
+    }
+    .result {
+        font-size: 16px;
+    }
+}
